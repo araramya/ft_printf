@@ -12,27 +12,60 @@
 
 #include "ft_printf.h"
 
-int ft_printf(const char *spec, ...)
+int ft_printf(const char *spec , ... )
 {
     int count;
-    char *str;
-    va_list ap;
+    const char *str;
+    va_list args;
 
     count = 0;
-    if(!(str = ft_strdup(spec))
-        return(-1);
-    va_start(ap, s);
-    count += ft_parse_string(str,ap);
+    va_start(str, spec)
+
 
 }
 
-int main()
-{
 
-    ft_printf("Arsen");
-    ft_printf("\n");
-    ft_printf("%d", 24);
-    ft_printf("\n");
-    ft_printf("%i", 56);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// int ft_printf(const char *spec, ...)
+// {
+//     int count;
+//     char *str;
+//     va_list ap;
+
+//     count = 0;
+//     if(!(str = ft_strdup(spec))
+//         return(-1);
+//     va_start(ap, s);
+//     count += ft_parse_string(str,ap);
+
+// }
+
+// int main()
+// {
+
+//     ft_printf("Arsen");
+//     ft_printf("\n");
+//     ft_printf("%d", 24);
+//     ft_printf("\n");
+//     ft_printf("%i", 56);
     
-}
+// }

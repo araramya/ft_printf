@@ -12,16 +12,48 @@
 
 #include "ft_printf.h"
 
-t_flags ft_flag_inital()
+t_flags ft_inital_flags()
 {
-    t_flag flag;
-
-    flag.spec = 0;
-    flag.width = 0;
-    flag.minus = 0;
-    flag.zero = 0;
-    flag.dot = -1;
-    flag.star = 0;
-    return (flag)
+    t_flags flags;
+    flags.dot = -1;
+    flags.minus = 0;
+    flags.star = 0;
+    flags.width = 0;
+    flags.zero = 0;
+    flags.spec = 0;
+    return (flags);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// t_flags ft_flag_inital()
+// {
+//     t_flag flag;
+
+//     flag.spec = 0;
+//     flag.width = 0;
+//     flag.minus = 0;
+//     flag.zero = 0;
+//     flag.dot = -1;
+//     flag.star = 0;
+//     return (flag)
+// }
 
