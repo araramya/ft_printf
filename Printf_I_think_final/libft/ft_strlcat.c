@@ -6,7 +6,7 @@
 /*   By: araramya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 14:17:42 by araramya          #+#    #+#             */
-/*   Updated: 2021/02/04 16:07:01 by araramya         ###   ########.fr       */
+/*   Updated: 2021/02/01 19:15:50 by araramya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	while (dst[i])
-		i++;
+		++i;
 	result = 0;
 	while (src[result])
-		result++;
+		++result;
 	if (dstsize <= i)
 		result += dstsize;
 	else

@@ -1,48 +1,60 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_hex.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: araramya <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/10 13:16:53 by araramya          #+#    #+#             */
+/*   Updated: 2021/04/10 18:29:31 by araramya         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../ft_printf.h"
 
-static char *ft_revers_hex(char *s)
+static char		*ft_revers_hex(char *s)
 {
-    int i;
-    int len;
-    char *ptr;
+	int		i;
+	int		len;
+	char	*ptr;
 
-    len = ft_strlen(s);
-    i = 0;
-    if(!(ptr = (char*)malloc(len+1)))
-        return (NULL);
-    while ((len) != 0)
-    {
-        ptr[i] = s[len -1];
-        i++;
-        len--;
-    }
-    ptr[i] = '\0';
-    return (ptr);
+	len = ft_strlen(s);
+	i = 0;
+	if (!(ptr = (char*)malloc(len + 1)))
+		return (NULL);
+	while ((len) != 0)
+	{
+		ptr[i] = s[len - 1];
+		i++;
+		len--;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
 
-int ft_len(size_t n)
+int				ft_len(size_t n)
 {
-    int i;
+	int i;
 
-    i = 0;
-    if(n == 0)
-        return (1);
-    while (n)
-    {
-        n /= 16;
-        i++;
-    }
-    return (i);
+	i = 0;
+	if (n == 0)
+		return (1);
+	while (n)
+	{
+		n /= 16;
+		i++;
+	}
+	return (i);
 }
 
-void ft_zero(char **s)
+void			ft_zero(char **s)
 {
-    int size;
-    char *ptr;
+	int		size;
+	char	*ptr;
 
-    size = flags.minwidth ? flags.minwidth : flags.maxwidth;
-    ptr = (char*)malloc(size);
-    	if ((flags.zero) && (flags.minwidth > (int)ft_strlen(*s)) && (!flags.dot))
+	size = flags.minwidth ? flags.minwidth : flags.maxwidth;
+	ptr = (char*)malloc(size);
+	if ((flags.zero) && (flags.minwidth > (int)ft_strlen(*s)) && (!flags.dot))
 	{
 		ft_memset(ptr, '0', (flags.minwidth - ft_strlen(*s)));
 		ptr = ft_strjoin(*s, ptr);
@@ -57,6 +69,7 @@ void ft_zero(char **s)
 	else
 		return ;
 }
+
 void			ft_second_hex(char **ptr)
 {
 	if (flags.zero || flags.dot)

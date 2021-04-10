@@ -1,14 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_str.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: araramya <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/10 13:17:03 by araramya          #+#    #+#             */
+/*   Updated: 2021/04/10 18:40:34 by araramya         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../ft_printf.h"
 
-void ft_seconnd_str(char *ptr, int len)
+void		ft_second_str(char *ptr, int len)
 {
-    if(flags.dot)
-    {
-        if((int)flags.maxwidth < ((int)ft_strlen(ptr)))
-            ft_memset((ptr + (flags.maxwidth)), '\0',
-				(ft_strlen(ptr) - flags.maxwidth));
-    }
-    if ((int)flags.minwidth > ((int)ft_strlen(ptr)))
+	if (flags.dot)
+		if ((int)flags.maxwidth < ((int)ft_strlen(ptr)))
+			ft_memset((ptr + (flags.maxwidth)), '\0',
+			(ft_strlen(ptr) - flags.maxwidth));
+	if ((int)flags.minwidth > ((int)ft_strlen(ptr)))
 	{
 		len = (int)flags.minwidth - ((int)ft_strlen(ptr));
 		if (!flags.minus)
