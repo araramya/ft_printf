@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: araramya <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/14 14:15:09 by araramya          #+#    #+#             */
+/*   Updated: 2021/04/14 14:31:29 by araramya         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "includes/ft_printf.h"
 
 t_flags		ft_init_flags(void)
@@ -67,8 +79,6 @@ int			ft_parse_save(const char *save, va_list args)
 	}
 	return (count);
 }
-
-
 
 int			ft_printf(const char *input, ...)
 {
